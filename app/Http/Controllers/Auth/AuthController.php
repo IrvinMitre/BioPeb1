@@ -50,12 +50,13 @@ class AuthController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|max:255',
+            'matricula' => 'required|min:9|max:9|unique:users',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
         ]);
     }
 
-    /**
+    /**201450989
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
@@ -65,6 +66,7 @@ class AuthController extends Controller
     {
         return User::create([
             'name' => $data['name'],
+            'matricula' => $data['matricula'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
