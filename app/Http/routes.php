@@ -18,8 +18,17 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
-//Falta la ruta para enviar lo del perfil
+
+//Ruta para el perfil
 Route::get('/perfil', function(){
 return view('Perfil/perfil');
 });
+//Ruta para la parte de lecturas
+Route::get('/lecturas', function(){
+return view('Lecturas/lecturas');
+});
 //Route::get
+//Ruta para la para el primercuestionario
+Route::get('/cuestionario1', function(){
+return view('Actividades/cuestionario1');
+});
