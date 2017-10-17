@@ -18,7 +18,8 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
-
-Route::get('/perfil', function () {
-    return view('Perfil/welcome');
+//Falta la ruta para enviar lo del perfil
+Route::get('/perfil', function(){
+return view('Perfil/perfil');
 });
+//Route::get
