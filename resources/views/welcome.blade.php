@@ -1,45 +1,78 @@
+<@extends('layouts.app')
+
+@section('content')
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>BioPeb</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BioPEP BUAP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+<style>
+  section .imagenes-menu img{
+    width: 90%;
+    margin: 10px;
+  }
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+  .fa-btn {
+    margin-right: 30px;
+  }
+</style>
+<!--Cuerpo de la pagina-->
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
+<body>
 
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
-            </div>
+<!--Introduccion-->
+  <section class="intro">
+    <div class="container">
+      <article class="row">
+        <div class="col-xs-3 col-sm-3 col-md-4 col-lg-4">
         </div>
-    </body>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+          <img src="imagenes/buap-icon.png" alt="" class="img-circle">
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-4 col-lg-4">
+        </div>
+      </article>
+    </div>
+  </section>
+
+<!--Seccion de temas-->
+  <section class="main">
+    <div class="container">
+      <div class="imagenes-menu">
+        <article class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <img src="{{ asset('Imagenes/actividades.jpg') }}" alt="prueba" class="img-rounded">
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <img src="{{ asset('Imagenes/actividades.jpg') }}" alt="prueba" class="img-rounded">
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <img src="{{ asset('Imagenes/actividades.jpg') }}" alt="prueba" class="img-rounded">
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <img src="{{ asset('Imagenes/actividades.jpg') }}" alt="prueba" class="img-rounded">
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <img src="{{ asset('Imagenes/actividades.jpg') }}" alt="prueba" class="img-rounded">
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <img src="{{ asset('Imagenes/actividades.jpg') }}" alt="prueba" class="img-rounded">
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+
+  <script src="js/jquery-3.2.1.min.js" charset="utf-8"></script>
+  <script src="bootstrap.min.js" charset="utf-8"></script>
+</body>
 </html>
+@endsection
