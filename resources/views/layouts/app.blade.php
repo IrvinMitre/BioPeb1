@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,9 +16,14 @@
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
     <style>
-        body {
+        body .navbar {
             font-family: 'Lato';
+            background:#424242;
+            color: #ffffff;
+
         }
+
+
 
         .fa-btn {
             margin-right: 30px;
@@ -55,7 +60,7 @@
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Ingresar</a></li>
-                        <li><a href="{{ url('/register') }}"><img src="C:\Users\Cara de rata\Documents\Proo\BioPeb1\resources\Imagenes\perfil.PNG"></a></li>
+                        <li><a href="{{ url('/register') }}">Registrar</a></li>
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -75,6 +80,25 @@
     </nav>
 
     @yield('content')
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="imagen-footer col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+            <img src="imagenes/buap-icon.png" alt="Escudo-BUAP">
+          </div>
+          <div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat. Duis aute irure dolor in re
+              prehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>

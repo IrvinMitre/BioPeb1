@@ -12,14 +12,19 @@
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 
+<style>
+  section .imagenes-menu img{
+    width: 90%;
+    margin: 10px;
+  }
+
+  .fa-btn {
+    margin-right: 30px;
+  }
+</style>
 <!--Cuerpo de la pagina-->
 
 <body>
-  <header>
-    <div class="container">
-      <h1>BioPEP BUAP</h1>
-    </div>
-  </header>
 
 <!--Introduccion-->
   <section class="intro">
@@ -39,43 +44,32 @@
 <!--Seccion de temas-->
   <section class="main">
     <div class="container">
-      <article class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-          <img src="imagenes/skull.jpg" alt="prueba" class="img-rounded">
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-          <img src="imagenes/skull.jpg" alt="prueba" class="img-rounded">
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-          <img src="imagenes/skull.jpg" alt="prueba" class="img-rounded">
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-          <img src="imagenes/skull.jpg" alt="prueba" class="img-rounded">
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-          <img src="imagenes/skull.jpg" alt="prueba" class="img-rounded">
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-          <img src="imagenes/skull.jpg" alt="prueba" class="img-rounded">
-        </div>
-      </article>
+
+      <div class="imagenes-menu">
+        <article class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <img src="{{ asset('Imagenes/actividades.jpg') }}" alt="prueba" class="img-rounded">
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <img src="{{ asset('Imagenes/actividades.jpg') }}" alt="prueba" class="img-rounded">
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <img src="{{ asset('Imagenes/actividades.jpg') }}" alt="prueba" class="img-rounded">
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <img src="{{ asset('Imagenes/actividades.jpg') }}" alt="prueba" class="img-rounded">
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <img src="{{ asset('Imagenes/actividades.jpg') }}" alt="prueba" class="img-rounded">
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <img src="{{ asset('Imagenes/actividades.jpg') }}" alt="prueba" class="img-rounded">
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
-
-  <aside class="">
-    <div class="container">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-  </aside>
-
-<!--Pie de pagina-->
-  <footer>
-    <div class="container">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-  </footer>
-  </div>
 
   <script src="js/jquery-3.2.1.min.js" charset="utf-8"></script>
   <script src="bootstrap.min.js" charset="utf-8"></script>
