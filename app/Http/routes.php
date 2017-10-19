@@ -22,4 +22,8 @@ Route::get('/home', 'HomeController@index');
 Route::get('/perfil', function(){
 return view('Perfil/perfil');
 });
+
+Route::get('/cuestionario', function(){
+return view('Actividades/Cuestionario/cuestionario');
+});
 //Route::get
