@@ -19,15 +19,22 @@
         body .navbar {
             font-family: 'Lato';
             background:#424242;
-            color: #ffffff;
 
         }
-
-
 
         .fa-btn {
             margin-right: 30px;
         }
+
+        footer {
+          background: #424242;
+          color:#fff;
+          padding: 15px;
+        }
+          footer .imagen-footer img{
+            width: 100%;
+          }
+
     </style>
 </head>
 <body id="app-layout">
@@ -51,9 +58,7 @@
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Inicio</a></li>
-                </ul>
+                
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
@@ -66,11 +71,13 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
-
+                            <ul class="nav navbar-nav">
+                              <li><a href="{{ url('/home') }}">Inicio</a></li>
+                            </ul>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Salir</a></li>
 
-                                <li><a href="{{ url('/perfil') }}">Perfil(Bien pero no lo reconoce)</a></li>
+                                <li><a href="{{ url('/perfil') }}">Perfil</a></li>
                             </ul>
                         </li>
                     @endif
@@ -85,7 +92,7 @@
       <div class="container">
         <div class="row">
           <div class="imagen-footer col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2">
-            <img src="imagenes/buap-icon.png" alt="Escudo-BUAP">
+            <img src="{{ asset('Imagenes/logoBuap.png') }}" alt="Escudo-BUAP">
           </div>
           <div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do

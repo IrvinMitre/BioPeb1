@@ -1,253 +1,311 @@
 @extends('layouts.app')
 
 @section('content')
+ 
+   <style>
+
+.btn-default {
+color: #333!important;
+background-color: #fff!important;
+border-color: #ccc!important;
+}
+
+.btn-default:hover {
+
+/*background-color: #ffffcc!important;
+*/
+}
+</style>
+    
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://s3.amazonaws.com/imagesfun/v2/bootstrap.css">
+  <link href="https://s3.amazonaws.com/imagesfun/v2/style.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+
+    </head>
+    <body>
+
+        
+
+<!--
+ <div class="container">
+        <div class="header">
+        <ul class="nav nav-pills pull-right">
+                <li><a href="http://thequizcreator.com/quiz/" class="hidden-xs">LANG-EN <img src="https://s3.amazonaws.com/imagesfun/usa.jpg"></a></li>
+          <li class="active"><a href="http://postea.la/quiz/">VER MAS TESTS</a></li>
+          <li><a class="hidden-xs" href="http://postea.la/quiz/crear/">CREAR MI PROPIO TEST</a></li>
+       
+        </ul>
+        <a href="http://postea.la/quiz/"> <h3 class="text-muted">QuizMachine</h3></a>
+      </div></div>
+-->
+
+
+<script>
+duplicado=0;
+triplicado=0;
+var win = [0,0,0,0,0,0,0],max=0;
+
+$( document ).ready(function() {
+    
+var preg=1;
+$(".resp").click(function(){
+    // console.log($(this).attr("r-value"));
+    win[$(this).attr("r-value")] ++;
+    //console.log(win[$(this).attr("r-value")]);
+$("#preg"+preg).hide();preg++;
+$("#preg"+preg).show();
+
+if($("#preg"+preg).length==0){
+
+for (key in win) {
+//Manejo duplicados
+if (win[key] == max) {
+  if(duplicado==0){
+    duplicado=key;
+  }else{
+     triplicado=key;
+  }
+}
+if (win[key] > max) {max=win[key];mkey=key;duplicado=0;triplicado=0;}
+}
+$("#loading").show();
+n=1;
+if(duplicado!=0) {n=2; console.log("dupli");console.log(duplicado);console.log(mkey);}
+if(triplicado!=0) n=3;
+n=Math.floor((Math.random() * n) + 1);
+if(n==1) window.location = "http://alegra.me/quiz2/resultado/179732/"+mkey+"/";
+if(n==2) window.location = "http://alegra.me/quiz2/resultado/179732/"+duplicado+"/";
+if(n==3) window.location = "http://alegra.me/quiz2/resultado/179732/"+triplicado+"/";
+}
+});
+});
+</script>
 
 <div class="container">
-    <h1>¿Qué orgánulo celular eres? </h1>
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default">
-                <div class="panel-heading"></div>
+
+<center>
+</center>
+
+   <div class="jumbotron text-center " id="preg1">
+      <h4>¿Qué orgánulo celular eres?         <br>
+         <small>Pregunta 1 de 6</small>
+      </h4>
+      <h2>De todos estos futuribles, elige uno:</h2>
+
+      <div class="abajo btn-group-vertical btn-group btn-group-lg">
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="3">
+               <small>Quiero hacer algo que me estimule, que me permita crear, pensar; además, los logros en estos trabajos son más aplaudidos</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="1">
+               <small>Me gustaría ser un director enrollado, de esos jefes que a la gente les motiva tener para trabajar</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="5">
+               <small>Me gustaría poder ser famoso: escritor, actor... Pero nada de personajes tipo Sálvame </small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="6">
+               <small>¿La verdad? No me imagino estas cosas todavía</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="4">
+               <small>Me gustaría poder ayudar a los demás de alguna manera, considero que todos debemos aportar cuanto podamos para construir un futuro mejor</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="2">
+               <small>Ojalá pudiera trabajar en un lugar idílico, que me permita desconectar con la naturaleza</small>
+            </button>
               
-                <div class="panel-body">
-                   <form class="form-horizontal">
-<fieldset>
+      </div><!-- b vert -->
+      <div class="progress progress-striped short">
+         <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 16.666666666667%"></div>
+
+      </div>
+
+   </div> <!--fumbo-->
+
+   <div class="jumbotron text-center invisible2" id="preg2">
+      <h4>¿Qué orgánulo celular eres?         <br>
+         <small>Pregunta 2 de 6</small>
+      </h4>
+      <h2>¿Con qué color te sientes más identificado (no tiene por qué coincidir con tu color favorito)?</h2>
+
+      <div class="abajo btn-group-vertical btn-group btn-group-lg">
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="2">
+               <small>Rojo</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="5">
+               <small>Verde</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="6">
+               <small>Marrón</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="1">
+               <small>Morado</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="4">
+               <small>Naranja</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="3">
+               <small>Amarillo</small>
+            </button>
+              
+      </div><!-- b vert -->
+      <div class="progress progress-striped short">
+         <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 33.333333333333%"></div>
+
+      </div>
+ 
+   </div> <!--fumbo-->
+
+   <div class="jumbotron text-center invisible2" id="preg3">
+      <h4>¿Qué orgánulo celular eres?         <br>
+         <small>Pregunta 3 de 6</small>
+      </h4>
+      <h2>¿Cómo te gusta relajarte?</h2>
+
+      <div class="abajo btn-group-vertical btn-group btn-group-lg">
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="1">
+               <small>Yo nunca me relajo, siempre estoy al pie del cañón</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="5">
+               <small>Escribiendo algo, escuchando música, viendo la tele...</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="6">
+               <small>Comiendo</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="2">
+               <small>Yendo a correr cerca de los árboles, desconecto mucho</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="3">
+               <small>Haciendo una actividad totalmente diferente a la que esté haciendo en ese momento</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="4">
+               <small>Me gusta bastante hacer manualidades; aunque me sirve juguetear con un boli dejando la mente en blanco</small>
+            </button>
+              
+      </div><!-- b vert -->
+      <div class="progress progress-striped short">
+         <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+
+      </div>
+   </div> <!--fumbo-->
+
+   <div class="jumbotron text-center invisible2" id="preg4">
+      <h4>¿Qué orgánulo celular eres?         <br>
+         <small>Pregunta 4 de 6</small>
+      </h4>
+      <h2>¿Cómo te describirían tus amigos?</h2>
+
+      <div class="abajo btn-group-vertical btn-group btn-group-lg">
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="2">
+               <small>Activo, no paro quieto</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="3">
+               <small>Versátil, hago de todo</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="5">
+               <small>Quizá un poco loco, pero en el buen sentido: me encanta reírme de todo</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="6">
+               <small>Raro, jejeje</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="1">
+               <small>Líder, pero no autoritario</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="4">
+               <small>Dispuesto, siempre que puedo trato de ayudar</small>
+            </button>
+              
+      </div><!-- b vert -->
+      <div class="progress progress-striped short">
+         <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 66.666666666667%"></div>
+
+      </div>
+   </div> <!--fumbo-->
+
+   <div class="jumbotron text-center invisible2" id="preg5">
+      <h4>¿Qué orgánulo celular eres?         <br>
+         <small>Pregunta 5 de 6</small>
+      </h4>
+      <h2>¿Qué componente de una orquesta te impresiona más?</h2>
+
+      <div class="abajo btn-group-vertical btn-group btn-group-lg">
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="6">
+               <small>Los flautistas</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="3">
+               <small>Los percusionistas</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="5">
+               <small>Los arpistas</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="4">
+               <small>Siempre me quedo pensando en quién habrá colocado tantas sillas y de esa forma tan particular: ¡vaya trabajera!</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="1">
+               <small>El director</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="2">
+               <small>Los violinistas</small>
+            </button>
+              
+      </div><!-- b vert -->
+      <div class="progress progress-striped short">
+         <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 83.333333333333%"></div>
+
+      </div>
+   </div> <!--fumbo-->
+
+   <div class="jumbotron text-center invisible2" id="preg6">
+      <h4>¿Qué orgánulo celular eres?         <br>
+         <small>Pregunta 6 de 6</small>
+      </h4>
+      <h2>De estos planes, ¿cuál elegirías para un sábado libre?</h2>
+
+      <div class="abajo btn-group-vertical btn-group btn-group-lg">
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="6">
+               <small>Quedarme en casa</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="3">
+               <small>Hacer una escapada con un par de amigos a una ciudad cercana y conocerla</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="1">
+               <small>Organizar una cena en mi casa: yo preparo la comida y decoro la mesa</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="5">
+               <small>Ir con unos amigos al cine, a ver un concierto, una obra de teatro...</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="4">
+               <small>Pregunto a mis amigos y lo que más les apetezca, me gusta verlos felices</small>
+            </button>
+                        <button class="btn btn-default btn-group-link resp" style="white-space: normal;" r-value="2">
+               <small>Quedar con unos amigos y hacer una ruta por el campo: ¡energía nueva!</small>
+            </button>
+              
+      </div><!-- b vert -->
+      <div class="progress progress-striped short">
+         <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
 
 
-<legend>  De todos estos futuribles, elige uno:</legend>
-<!-- Primera pregunta -->
-<div class="form-group">
-  <div class="col-md-4">
-  <div class="radio">
-    <label for="radios-0">
-      <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
-Me gustaría poder ayudar a los demás de alguna manera, considero que todos debemos aportar cuanto podamos para construir un futuro mejor
-    </label>
-    </div>
-  <div class="radio">
-    <label for="radios-1">
-      <input type="radio" name="radios" id="radios-1" value="2">
-      Me gustaría ser un director enrollado, de esos jefes que a la gente les motiva tener para trabajar
-    </label>
-    </div>
-   <div class="radio">
-    <label for="radios-2">
-      <input type="radio" name="radios" id="radios-2" value="3">
-      Me gustaría poder ser famoso: escritor, actor... Pero nada de personajes tipo Sálvame
-    </label>
-    </div>
-    <div class="radio">
-    <label for="radios-3">
-      <input type="radio" name="radios" id="radios-3" value="4">
-      ¿La verdad? No me imagino estas cosas todavía
-    </label>
-    </div> 
-    <div class="radio">
-    <label for="radios-4">
-      <input type="radio" name="radios" id="radios-4" value="5">
-      Quiero hacer algo que me estimule, que me permita crear, pensar; además, los logros en estos trabajos son más aplaudidos
-    </label>
-    </div> 
-    <div class="radio">
-    <label for="radios-5">
-      <input type="radio" name="radios" id="radios-5" value="6">
-      Ojalá pudiera trabajar en un lugar idílico, que me permita desconectar con la naturaleza
-    </label>
-    </div> 
-  </div>
-</div>
+<div id="loading" class="invisible2">
+<br><br>
 
-<legend> ¿Con qué color te sientes más identificado (no tiene por qué coincidir con tu color favorito)?
-</legend>
-<!-- Segunda pregunta -->
-<div class="form-group">
-  <div class="col-md-4">
-  <div class="radio">
-    <label for="radios-7">
-      <input type="radio" name="radios" id="radios-7" value="1">
-     Verde
-    </label>
-    </div>
-  <div class="radio">
-    <label for="radios-8">
-      <input type="radio" name="radios" id="radios-8" value="2">
-     Morado
-    </label>
-    </div>
-  <div class="radio">
-    <label for="radios-9">
-      <input type="radio" name="radios" id="radios-9" value="3">
-      Rojo
-    </label>
-    </div>
-    <div class="radio">
-    <label for="radios-10">
-      <input type="radio" name="radios" id="radios-10" value="4">
-    Amarillo
-    </label>
-    </div>
-     <div class="radio">
-    <label for="radios-11">
-      <input type="radio" name="radios" id="radios-11" value="5">
-    Naranja
-    </label>
-    </div>
-    <div class="radio">
-    <label for="radios-12">
-      <input type="radio" name="radios" id="radios-12" value="6">
-    Marrón
-    </label>
-    </div>
-  </div>
-</div>
+      <h1>Creando...<small><br>Espere por favor...</small></h1>
 
-<legend> ¿Cómo te gusta relajarte?
-</legend>
-<!-- Quinta pregunta -->
-<div class="form-group">
-  <div class="col-md-4">
-  <div class="radio">
-    <label for="radios-13">
-      <input type="radio" name="radios" id="radios-13" value="1">
-Yo nunca me relajo, siempre estoy al pie del cañón
-    </label>
-    </div>
-  <div class="radio">
-    <label for="radios-14">
-      <input type="radio" name="radios" id="radios-14" value="2">
-Escribiendo algo, escuchando música, viendo la tele...
-    </label>
-    </div>
-  <div class="radio">
-    <label for="radios-15">
-      <input type="radio" name="radios" id="radios-15" value="3">
-Comiendo
-    </label>
-    </div>
-    <div class="radio">
-    <label for="radios-16">
-      <input type="radio" name="radios" id="radios-16" value="4">
-  Yendo a correr cerca de los árboles, desconecto mucho
-    </label>
-    </div>
-     <div class="radio">
-    <label for="radios-17">
-      <input type="radio" name="radios" id="radios-17" value="5"> 
-Haciendo una actividad totalmente diferente a la que esté haciendo en ese momento
-    </label>
-    </div>
-    <div class="radio">
-    <label for="radios-18">
-      <input type="radio" name="radios" id="radios-18" value="6">
-Me gusta bastante hacer manualidades; aunque me sirve juguetear con un boli dejando la mente en blanco
-    </label>
-    </div>
-  </div>
-</div>
-
-<legend> ¿Cómo te describirían tus amigos?
-</legend>
-<!-- Cuarta -->
-<div class="form-group">
-  <div class="col-md-4">
-  <div class="radio">
-    <label for="radios-19">
-      <input type="radio" name="radios" id="radios-19" value="1">
-Dispuesto, siempre que puedo trato de ayudar
-    </label>
-    </div>
-  <div class="radio">
-    <label for="radios-20">
-      <input type="radio" name="radios" id="radios-20" value="2">
-   Quizá un poco loco, pero en el buen sentido: me encanta reírme de todo
-    </label>
-    </div>
-  <div class="radio">
-    <label for="radios-21">
-      <input type="radio" name="radios" id="radios-21" value="3">
-     Versátil, hago de todo
-    </label>
-    </div>
-    <div class="radio">
-    <label for="radios-22"
-       <input type="radio" name="radios" id="radios-22" value="4">
-    Activo, no paro
-    </label>
-    </div>
-     <div class="radio">
-    <label for="radios-23">
-      <input type="radio" name="radios" id="radios-23" value="5">
-    Líder, pero no autoritario
-    </label>
-    </div>
-    <div class="radio">
-    <label for="radios-24">
-      <input type="radio" name="radios" id="radios-24" value="6">
-     Raro, jejeje
-    </label>
-    </div>
-  </div>
-</div>
-
-<legend> ¿Qué componente de una orquesta te impresiona más?
-</legend>
-<!-- Quinta pregunta -->
-<div class="form-group">
-  <div class="col-md-4">
-  <div class="radio">
-    <label for="radios-25">
-      <input type="radio" name="radios" id="radios-25" value="1">
-El director
-    </label>
-    </div>
-  <div class="radio">
-    <label for="radios-26">
-      <input type="radio" name="radios" id="radios-26" value="2">
-Los arpistas
-    </label>
-    </div>
-  <div class="radio">
-    <label for="radios-27">
-      <input type="radio" name="radios" id="radios-27" value="3">
- Siempre me quedo pensando en quién habrá colocado tantas sillas y de esa forma tan particular: ¡vaya trabajera!
-    </label>
-    </div>
-    <div class="radio">
-    <label for="radios-28">
-      <input type="radio" name="radios" id="radios-28" value="4">
-   Los violinistas
-    </label>
-    </div>
-     <div class="radio">
-    <label for="radios-29">
-      <input type="radio" name="radios" id="radios-29" value="5">
-   Los percusionistas
-    </label>
-    </div>
-    <div class="radio">
-    <label for="radios-30">
-      <input type="radio" name="radios" id="radios-30" value="6">
-   Los flautistas
-    </label>
-    </div>
-  </div>
-</div>
-
-<!-- Button de aceptar -->
-<div class="form-group">
-  <div class="col-md-4">
-    <button id="singlebutton" name="singlebutton" class="btn btn-primary">Siguiente</button>
-  </div>
-</div>
-</fieldset>
-</form>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
+<br><br>
+ </div>
 </div>
 
 
 @endsection
+
+ 

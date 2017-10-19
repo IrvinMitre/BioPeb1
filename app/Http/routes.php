@@ -26,4 +26,8 @@ return view('Perfil/perfil');
 Route::get('/cuestionario', function(){
 return view('Actividades/Cuestionario/cuestionario');
 });
+
+Route::get('/1', function(){
+return view('Actividades/Cuestionario/Respuestas/1');
+});
 //Route::get
