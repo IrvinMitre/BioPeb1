@@ -1,7 +1,7 @@
 @extends('layouts.app')
-
 @section('content')
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -12,7 +12,8 @@
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 
-<style>
+<style type="text/css"><!--
+
   section .imagenes-menu img{
     width: 100%;
     margin: 10px;
@@ -32,11 +33,38 @@
     width: 100%;
       margin: 0 auto; /* Align slide image horizontally center */
   }
+ 
+	footer {
+		background-color: #424242;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 180px;
+		color: white;
+	}
 
-</style>
+  #bg{
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
+		background-image: url("Imagenes/fondo.jpg"); 
+		background-size:100% 100%;
+		background-attachment: fixed;
+	}
+
+	--></style>
+
 <!--Cuerpo de la pagina-->
 
 <body>
+
+<div id="bg"></div>
+
 <!--Seccion de temas-->
   <section class="main">
     <div class="container">
@@ -58,32 +86,37 @@
       <div class="imagenes-menu">
         <article class="row">
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-          <a href="{{ url('/actividades') }}"><img src="{{ asset('Imagenes/actividades.jpg') }}" alt="prueba" class="img-rounded"></a>  
+            <img src="{{ asset('Imagenes/act.jpg') }}" alt="actividades" class="img-rounded">
           </div>
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-           <a href="{{ url('/contacto') }}"> <img src="{{ asset('Imagenes/contacto.jpg') }}" alt="prueba" class="img-rounded"></a>
+            <img src="{{ asset('Imagenes/lecturas.jpg') }}" alt="lecturas" class="img-rounded">
           </div>
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <a href="{{ url('/contacto') }}"><img src="{{ asset('Imagenes/faqs.jpg') }}" alt="prueba" class="img-rounded"></a>
+            <img src="{{ asset('Imagenes/multimedia.jpg') }}" alt="multimedia" class="img-rounded">
+          </div>
+		  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+			<img src="{{ asset('Imagenes/avisos.jpg') }}" alt="avisos" class="img-rounded">
+		  </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <img src="{{ asset('Imagenes/forin.jpg') }}" alt="foro" class="img-rounded">
+          </div>
+		  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <img src="{{ asset('Imagenes/faqs.jpg') }}" alt="preguntas" class="img-rounded">
           </div>
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <a href="{{ url('/foro') }}"><img src="{{ asset('Imagenes/foro.jpg') }}" alt="prueba" class="img-rounded"></a>
+            <img src="{{ asset('Imagenes/contacto.jpg') }}" alt="contacto" class="img-rounded">
           </div>
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <a href="{{ url('/lecturas') }}"><img src="{{ asset('Imagenes/lecturas.jpg') }}" alt="prueba" class="img-rounded"></a>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <a href="{{ url('/multimedia') }}"><img src="{{ asset('Imagenes/multimedia.jpg') }}" alt="prueba" class="img-rounded"></a>
-          </div>
+			<img src="{{ asset('Imagenes/bio.jpg') }}" alt="acerca de" class="img-rounded">
+		  </div>
         </article>
       </div>
     </div>
   </section>
 
-
-
   <script src="js/jquery-3.2.1.min.js" charset="utf-8"></script>
   <script src="bootstrap.min.js" charset="utf-8"></script>
 </body>
+<div class="footer"></div>
 </html>
 @endsection
