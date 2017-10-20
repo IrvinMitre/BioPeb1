@@ -17,17 +17,56 @@ Route::get('/', function () {
 
 Route::auth();
 
-Route::get('/home', 'HomeController@index');
-//Falta la ruta para enviar lo del perfil
+Route::get('/home', 'HomeController@index')->middleware('auth');
+//--------------------------------------------------
+//Ruta del perfil
 Route::get('/perfil', function(){
 return view('Perfil/perfil');
-});
+})->middleware('auth');
 
+//--------------------------------------------------
+//Ruta del cuestionario
 Route::get('/cuestionario', function(){
 return view('Actividades/Cuestionario/cuestionario');
-});
-
+})->middleware('auth');
+//ruta de una imagen que lanza el cuestionario
 Route::get('/1', function(){
 return view('Actividades/Cuestionario/Respuestas/1');
-});
+})->middleware('auth');
+//--------------------------------------------------
+//Ruta de lecturas
+Route::get('/lecturas', function(){
+return view('Lecturas/lecturas');
+})->middleware('auth');
+//--------------------------------------------------
+//Ruta de actividades
+Route::get('/actividades', function(){
+return view('Actividades/actividades');
+})->middleware('auth');
+//--------------------------------------------------
+//Ruta del foro
+Route::get('/foro', function(){
+return view('Foro/foro');
+})->middleware('auth');
+
+//--------------------------------------------------
+//--------------------------------------------------
+//Ruta del foro
+Route::get('/multimedia', function(){
+return view('Multimedia/multimedia');
+})->middleware('auth');
+
+//--------------------------------------------------
+//Ruta del contacto
+Route::get('/contacto', function(){
+return view('Contacto/contacto');
+})->middleware('auth');
+
+//--------------------------------------------------
+//Ruta de las preguntas
+Route::get('/preguntas', function(){
+return view('Preguntas/preguntas');
+})->middleware('auth');
+
+//--------------------------------------------------
 //Route::get
