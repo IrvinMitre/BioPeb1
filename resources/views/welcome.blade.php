@@ -10,9 +10,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estilos.css">
+   <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
 
-<style>
+<style type="text/css"><!--
+
+	footer {
+		background-color: #424242;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 180px;
+		color: white;
+	}
+
   section .imagenes-menu img{
     width: 100%;
     margin: 10px;
@@ -32,8 +43,9 @@
     width: 100%;
       margin: 0 auto; /* Align slide image horizontally center */
   }
+--></style>
 
-</style>
+
 <!--Cuerpo de la pagina-->
 
 <body>
@@ -53,16 +65,16 @@
           <!-- Wrapper for carousel items -->
           <div class="carousel-inner">
               <div class="item active">
-                  <img src="{{ asset('Imagenes/slide1.jpg') }}" alt="First Slide" class="img-rounded">
+                  <img src="{{ asset('Imagenes/s1.jpg') }}" alt="First Slide" class="img-rounded">
               </div>
               <div class="item">
-                  <img src="{{ asset('Imagenes/slide2.jpg') }}" alt="Second Slide" class="img-rounded">
+                  <img src="{{ asset('Imagenes/s2.jpg') }}" alt="Second Slide" class="img-rounded">
               </div>
               <div class="item">
-                  <img src="{{ asset('Imagenes/slide3.jpg') }}" alt="Third Slide" class="img-rounded">
+                  <img src="{{ asset('Imagenes/s3.jpg') }}" alt="Third Slide" class="img-rounded">
               </div>
               <div class="item">
-                  <img src="{{ asset('Imagenes/slide4.jpg') }}" alt="Forth Slide" class="img-rounded">
+                  <img src="{{ asset('Imagenes/s4.jpg') }}" alt="Forth Slide" class="img-rounded">
               </div>
           </div>
           <!-- Carousel controls -->
@@ -76,11 +88,10 @@
       <!--Seccion del carrucel-->
 
   </section>
-
-
-
   <script src="js/jquery-3.2.1.min.js" charset="utf-8"></script>
   <script src="bootstrap.min.js" charset="utf-8"></script>
-</body>
+  </body>
+<div class="footer"></div>
+
 </html>
 @endsection
