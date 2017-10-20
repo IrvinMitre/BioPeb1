@@ -68,26 +68,13 @@
 <!--Seccion de temas-->
   <section class="main">
     <div class="container">
-
-      <!--Seccion del carrucel-->
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Carousel indicators -->
-          
-          <!-- Carousel controls -->
-          <a class="carousel-control left" href="#myCarousel" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left"></span>
-          </a>
-          <a class="carousel-control right" href="#myCarousel" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right"></span>
-          </a>
-      </div>
-      <!--Seccion del carrucel-->
-
       <div class="imagenes-menu">
         <article class="row">
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <img src="{{ asset('Imagenes/act.jpg') }}" alt="actividades" class="img-rounded">
-          </div>
+            <a href="/actividades">
+			<img src="{{ asset('Imagenes/act.jpg') }}" alt="actividades" class="img-rounded">
+			</a>
+		  </div>
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
             <img src="{{ asset('Imagenes/lecturas.jpg') }}" alt="lecturas" class="img-rounded">
           </div>
