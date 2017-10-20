@@ -75,29 +75,6 @@
       </div>
       <!--Seccion del carrucel-->
 
-      <div class="imagenes-menu">
-        <article class="row">
-          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <img src="{{ asset('Imagenes/actividades.jpg') }}" alt="prueba" class="img-rounded">
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <img src="{{ asset('Imagenes/contacto.jpg') }}" alt="prueba" class="img-rounded">
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <img src="{{ asset('Imagenes/faqs.jpg') }}" alt="prueba" class="img-rounded">
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <img src="{{ asset('Imagenes/foro.jpg') }}" alt="prueba" class="img-rounded">
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <img src="{{ asset('Imagenes/lecturas.jpg') }}" alt="prueba" class="img-rounded">
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <img src="{{ asset('Imagenes/multimedia.jpg') }}" alt="prueba" class="img-rounded">
-          </div>
-        </article>
-      </div>
-    </div>
   </section>
 
 

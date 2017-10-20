@@ -8,7 +8,8 @@
                 <div class="panel-heading">:v</div>
 
                 <div class="panel-body">
-                   Mamada de Actividades
+                   Mamada actividades
+                   <img src="C:resources\Imagenes\actividades.jpg">
                 </div>
             </div>
         </div>
