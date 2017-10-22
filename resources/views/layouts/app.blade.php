@@ -17,9 +17,8 @@
 
     <style>
         body .navbar {
-            font-family: 'Lato';
+         	font-family: 'Lato';
             background:#424242;
-
         }
 
         .fa-btn {
@@ -31,10 +30,9 @@
           color:#fff;
           padding: 15px;
         }
-          footer .imagen-footer img{
+        footer .imagen-footer img{
             width: 100%;
-          }
-
+        }
     </style>
 </head>
 <body id="app-layout">
@@ -109,15 +107,22 @@
           <div class="imagen-footer col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2">
             <img src="{{ asset('Imagenes/logoBuap.png') }}" alt="Escudo-BUAP">
           </div>
-          <div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat. Duis aute irure dolor in re
-              prehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum.</p>
-          </div>
+		 <div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+            <p><br><br></p>
+         </div>
+         <div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+            <p>Contáctanos</p>
+         </div>
+		 <div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+            <p>Acerca de</p>
+         </div>
+		 <div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+            <p>FAQ's</p>
+         </div>
+         <div align="right" class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+            <p>Powered by BioPEB &copy 2017</p>
+         </div>
+
         </div>
       </div>
     </footer>
