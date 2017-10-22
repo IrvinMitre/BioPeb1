@@ -1,58 +1,115 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-@section('content')
- 
-   <style>
+    <title>BioPeb</title>
 
-.btn-default {
-color: #333!important;
-background-color: #fff!important;
-border-color: #ccc!important;
-}
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
 
-.btn-default:hover {
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
-/*background-color: #ffffcc!important;
-*/
-}
-</style>
-    
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <style>
+        body .navbar {
+            font-family: 'Lato';
+            background:#424242;
 
-<link rel="stylesheet" href="https://s3.amazonaws.com/imagesfun/v2/bootstrap.css">
-  <link href="https://s3.amazonaws.com/imagesfun/v2/style.css" rel="stylesheet">
+        }
 
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        .fa-btn {
+            margin-right: 30px;
+        }
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
+        footer {
+          background: #424242;
+          color:#fff;
+          padding: 15px;
+        }
+          footer .imagen-footer img{
+            width: 100%;
+          }
+
+    </style>
+</head>
+<body id="app-layout">
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+
+                <!-- Collapsed Hamburger -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!-- Branding Image -->
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    BioPeb
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                <!-- Left Side Of Navbar -->
+                
+
+                <!-- Right Side Of Navbar -->
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Authentication Links -->
+                    @if (Auth::guest())
+                        <li><a href="{{ url('/login') }}">Ingresar</a></li>
+                        <li><a href="{{ url('/register') }}">Registrar</a></li>
+                    @else
+                            <ul class="nav navbar-nav">
+                              <li><a href="{{ url('/home') }}">Inicio</a></li>
+                            </ul>
+                            <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            Menu<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ url('/actividades') }}"></i>Actividades</a></li>
+                                <li><a href="{{ url('/lecturas') }}">Lecturas</a></li>
+                                <li><a href="{{ url('/foro') }}">Foro</a></li>
+                                <li><a href="{{ url('/multimedia') }}">multimedia</a></li>
+                                <li><a href="{{ url('/contacto') }}">Contacto</a></li>
+                                <li><a href="{{ url('/preguntas') }}">Preguntas</a></li>
+
+                            </ul>
+                            </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+                            
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Salir</a></li>
+
+                                <li><a href="{{ url('/perfil') }}">Perfil</a></li>
+                            </ul>
+                        </li>
+                    @endif
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    @yield('content')
 
 
-    </head>
-    <body>
+    <!-- JavaScripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 
-        
-
-<!--
- <div class="container">
-        <div class="header">
-        <ul class="nav nav-pills pull-right">
-                <li><a href="http://thequizcreator.com/quiz/" class="hidden-xs">LANG-EN <img src="https://s3.amazonaws.com/imagesfun/usa.jpg"></a></li>
-          <li class="active"><a href="http://postea.la/quiz/">VER MAS TESTS</a></li>
-          <li><a class="hidden-xs" href="http://postea.la/quiz/crear/">CREAR MI PROPIO TEST</a></li>
-       
-        </ul>
-        <a href="http://postea.la/quiz/"> <h3 class="text-muted">QuizMachine</h3></a>
-      </div></div>
--->
-
-
-<script>
+    <script>
 duplicado=0;
 triplicado=0;
 var win = [0,0,0,0,0,0,0],max=0;
@@ -268,6 +325,7 @@ if(n==3) window.location = "http://alegra.me/quiz2/resultado/179732/"+triplicado
    <div class="jumbotron text-center invisible2" id="preg6">
       <h4>¿Qué orgánulo celular eres?         <br>
          <small>Pregunta 6 de 6</small>
+         <small>Se le rediccionara a una pagina externa</small>
       </h4>
       <h2>De estos planes, ¿cuál elegirías para un sábado libre?</h2>
 
@@ -299,13 +357,24 @@ if(n==3) window.location = "http://alegra.me/quiz2/resultado/179732/"+triplicado
 <div id="loading" class="invisible2">
 <br><br>
 
-      <h1>Creando...<small><br>Espere por favor...</small></h1>
+      <h1>Creando...Se le rediccionara a una pagina externa<small><br>Espere por favor...</small></h1>
 
 <br><br>
  </div>
 </div>
+</body>
 
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="imagen-footer col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+            <img src="{{ asset('Imagenes/logoBuap.png') }}" alt="Escudo-BUAP">
+          </div>
+          <div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+            <p>Esta plataforma es para ti amigo de la -benito :v</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+</html>
 
-@endsection
-
- 
