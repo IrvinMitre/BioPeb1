@@ -76,8 +76,10 @@
 			</a>
 		  </div>
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <img src="{{ asset('Imagenes/lecturas.jpg') }}" alt="lecturas" class="img-rounded">
-          </div>
+            <a href="/lecturas">
+			<img src="{{ asset('Imagenes/lecturas.jpg') }}" alt="lecturas" class="img-rounded">
+			</a>
+		  </div>
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
             <img src="{{ asset('Imagenes/multimedia.jpg') }}" alt="multimedia" class="img-rounded">
           </div>
