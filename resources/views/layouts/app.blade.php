@@ -47,7 +47,6 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
                     BioPeb
@@ -66,13 +65,17 @@
                         <li><a href="{{ url('/register') }}">Registrar</a></li>
                     @else
                             <ul class="nav navbar-nav">
-                              <li><a href="{{ url('/home') }}">Inicio</a></li>
+                              <li>
+								<a href="{{ url('/home') }}">
+								<span class="glyphicon glyphicon-home"></span>
+								Inicio</a></li>
                             </ul>
                             <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            Menu<span class="caret"></span>
+                            <span class="glyphicon glyphicon-th-list">
+							Menu<span class="caret"></span>
                             </a>
-                            <ul class="dropdown-menu" role="menu">
+							<ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/actividades') }}"></i>Actividades</a></li>
                                 <li><a href="{{ url('/lecturas') }}">Lecturas</a></li>
                                 <li><a href="{{ url('/foro') }}">Foro</a></li>
@@ -84,13 +87,15 @@
                             </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+								<span class="glyphicon glyphicon-user">
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
                             
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Salir</a></li>
-
-                                <li><a href="{{ url('/perfil') }}">Perfil</a></li>
+                                <li><a href="{{ url('/perfil') }}">
+								<span class="glyphicon glyphicon-user">
+								Perfil</a></li>
                             </ul>
                         </li>
                     @endif
@@ -111,13 +116,13 @@
             <p><br><br></p>
          </div>
          <div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-            <p>Contáctanos</p>
+            <p><span class="glyphicon glyphicon-envelope"></span> Contáctanos</p>
          </div>
 		 <div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-            <p>Acerca de</p>
+            <p><span class="glyphicon glyphicon-leaf"></span> Acerca de</p>
          </div>
 		 <div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-            <p>FAQ's</p>
+            <p><span class="glyphicon glyphicon-question-sign"></span> FAQ's</p>
          </div>
          <div align="right" class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
             <p>Powered by BioPEB &copy 2017</p>
