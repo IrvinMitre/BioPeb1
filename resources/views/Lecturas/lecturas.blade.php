@@ -8,7 +8,11 @@
                 <div class="panel-heading">:v</div>
 
                 <div class="panel-body">
+<<<<<<< HEAD
                    Mamada de Lecturas
+=======
+                  Esta parte es para las lecturas
+>>>>>>> origin/Irvin
                 </div>
             </div>
         </div>
