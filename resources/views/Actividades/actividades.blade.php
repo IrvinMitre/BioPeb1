@@ -33,7 +33,7 @@
     width: 100%;
       margin: 0 auto; /* Align slide image horizontally center */
   }
- 
+
 	footer {
 		background-color: #424242;
 		position: absolute;
@@ -52,7 +52,7 @@
 		width: 100%;
 		height: 100%;
 		background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-		background-image: url("Imagenes/fondo.jpg"); 
+		background-image: url("Imagenes/fondo.jpg");
 		background-size:100% 100%;
 		background-attachment: fixed;
 	}
@@ -71,6 +71,7 @@
 					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 						<a href="/crucigrama">
 						<img src="{{ asset('Imagenes/cruz.jpg') }}" alt="actividades" class="img-rounded">
+            <img src="{{ asset('Imagenes/test.jpg') }}" alt="actividades" class="img-rounded">
 					</div>
 				</article>
 			</div>
@@ -79,9 +80,8 @@
 
 	<script src="js/jquery-3.2.1.min.js" charset="utf-8"></script>
 	<script src="bootstrap.min.js" charset="utf-8"></script>
-	
+
 </body>
 
 </html>
 @endsection
-

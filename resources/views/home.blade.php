@@ -56,6 +56,9 @@
 		background-size:100% 100%;
 		background-attachment: fixed;
 	}
+  footer .imagen-footer img{
+      width: 100%;
+  }
 
 	--></style>
 
@@ -102,7 +105,31 @@
       </div>
     </div>
   </section>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="imagen-footer col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+          <img src="{{ asset('Imagenes/logoBuap.png') }}" alt="Escudo-BUAP">
+        </div>
+   <div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+          <p><br><br></p>
+       </div>
+       <div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+          <p><span class="glyphicon glyphicon-envelope"></span> Contáctanos</p>
+       </div>
+   <div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+          <p><span class="glyphicon glyphicon-leaf"></span> Acerca de</p>
+       </div>
+   <div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+          <p><span class="glyphicon glyphicon-question-sign"></span> FAQ's</p>
+       </div>
+       <div align="right" class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+          <p>Powered by BioPEB &copy 2017</p>
+       </div>
 
+      </div>
+    </div>
+  </footer>
   <script src="js/jquery-3.2.1.min.js" charset="utf-8"></script>
   <script src="bootstrap.min.js" charset="utf-8"></script>
 </body>
