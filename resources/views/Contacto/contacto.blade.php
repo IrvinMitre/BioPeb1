@@ -1,11 +1,5 @@
 @extends('layouts.app')
 @section('content')
-<html>
-	<head>
-		<tittle>
-			Quiz
-		</tittle>
-	</head>
 	<style type="text/css"><!--
 	  #bg{
 		content: '';
@@ -292,10 +286,14 @@
 		opacity: 1.0;
 	}
 	--></style>
-
+<html>
+	<head>
+		<tittle>
+		</tittle>
+	</head>
 <body>
+	<div id=bg>
 	<div class="container">
-		<div id="bg">
 		<section>
 			<h3 class="major">Contactar con Soporte</h3>
 			<form method="post" action="#">
@@ -335,12 +333,14 @@
 					<label for="demo-copy">Enviarme una copia</label>
 				</div>
 				<ul class="actions">
-					<input type="submit" value="Enviar mensaje" class="special" />
-					<input type="reset" value="Borrar" />
+					<a href="mailto:biopeb.000webhostapp.com">
+						<input type="submit" class="btn btn-primary" value="Enviar mensaje">
+					</a>
+					<input type="reset" class="btn btn-danger" value="Borrar">
 				</ul>
 			</form>
 		</section>
-		</div>
+	</div>
 	</div>
 </body>
 </html>
