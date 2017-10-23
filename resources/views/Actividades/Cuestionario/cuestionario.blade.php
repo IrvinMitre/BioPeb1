@@ -17,25 +17,35 @@
 
     <style>
         body .navbar {
-            font-family: 'Lato';
+          font-family: 'Lato';
             background:#424242;
-
+            
         }
 
         .fa-btn {
             margin-right: 30px;
         }
+        
 
         footer {
-          background: #424242;
-          color:#fff;
-          padding: 15px;
+        background-color: #424242;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 180px;
+        color: white;
         }
-          footer .imagen-footer img{
+        footer .imagen-footer img{
             width: 100%;
-          }
-
+        }
     </style>
+
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+
+  <link href="https://s3.amazonaws.com/imagesfun/v2/style.css" rel="stylesheet">
+ 
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </head>
 <body id="app-layout">
     <nav class="navbar navbar-default navbar-static-top">
@@ -49,7 +59,6 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
                     BioPeb
@@ -68,13 +77,17 @@
                         <li><a href="{{ url('/register') }}">Registrar</a></li>
                     @else
                             <ul class="nav navbar-nav">
-                              <li><a href="{{ url('/home') }}">Inicio</a></li>
+                              <li>
+                <a href="{{ url('/home') }}">
+                <span class="glyphicon glyphicon-home"></span>
+                Inicio</a></li>
                             </ul>
                             <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            Menu<span class="caret"></span>
+                            <span class="glyphicon glyphicon-th-list">
+              Menu<span class="caret"></span>
                             </a>
-                            <ul class="dropdown-menu" role="menu">
+              <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/actividades') }}"></i>Actividades</a></li>
                                 <li><a href="{{ url('/lecturas') }}">Lecturas</a></li>
                                 <li><a href="{{ url('/foro') }}">Foro</a></li>
@@ -86,13 +99,16 @@
                             </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <span class="glyphicon glyphicon-user">
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
                             
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Salir</a></li>
-
-                                <li><a href="{{ url('/perfil') }}">Perfil</a></li>
+                                  <!-- JavaScripts 
+                                <li><a href="{{ url('/perfil') }}">
+                <span class="glyphicon glyphicon-user">
+                Perfil</a></li>-->
                             </ul>
                         </li>
                     @endif
@@ -324,8 +340,9 @@ if(n==3) window.location = "http://alegra.me/quiz2/resultado/179732/"+triplicado
 
    <div class="jumbotron text-center invisible2" id="preg6">
       <h4>¿Qué orgánulo celular eres?         <br>
+       <h3>Se le rediccionara a una pagina externa</h3>
          <small>Pregunta 6 de 6</small>
-         <small>Se le rediccionara a una pagina externa</small>
+        
       </h4>
       <h2>De estos planes, ¿cuál elegirías para un sábado libre?</h2>
 
@@ -364,17 +381,6 @@ if(n==3) window.location = "http://alegra.me/quiz2/resultado/179732/"+triplicado
 </div>
 </body>
 
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="imagen-footer col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2">
-            <img src="{{ asset('Imagenes/logoBuap.png') }}" alt="Escudo-BUAP">
-          </div>
-          <div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-            <p>Esta plataforma es para ti amigo de la -benito :v</p>
-          </div>
-        </div>
-      </div>
-    </footer>
+   
 </html>
 

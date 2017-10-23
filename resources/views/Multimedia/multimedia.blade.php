@@ -2,16 +2,12 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default">
-                <div class="panel-heading">:v</div>
-
-                <div class="panel-body">
-                   Mamada de multimedia
-                </div>
-            </div>
-        </div>
-    </div>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/Ps54eXe8YHY" frameborder="0" allowfullscreen></iframe>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/hW9ar2-BvQs" frameborder="0" allowfullscreen></iframe>
+                  <br>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/-UXALC2hPWU" frameborder="0" allowfullscreen></iframe>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/s8aRRD9vy2A" frameborder="0" allowfullscreen></iframe>
+         
+   
 </div>
 @endsection

@@ -19,16 +19,21 @@
         body .navbar {
          	font-family: 'Lato';
             background:#424242;
+            
         }
 
         .fa-btn {
             margin-right: 30px;
         }
+        
 
         footer {
-          background: #424242;
-          color:#fff;
-          padding: 15px;
+        background-color: #424242;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 180px;
+        color: white;
         }
         footer .imagen-footer img{
             width: 100%;
@@ -93,9 +98,10 @@
                             
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Salir</a></li>
+                                  <!-- JavaScripts 
                                 <li><a href="{{ url('/perfil') }}">
 								<span class="glyphicon glyphicon-user">
-								Perfil</a></li>
+								Perfil</a></li>-->
                             </ul>
                         </li>
                     @endif
@@ -132,7 +138,7 @@
       </div>
     </footer>
 
-    <!-- JavaScripts -->
+  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}

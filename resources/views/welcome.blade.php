@@ -23,7 +23,19 @@
 		height: 180px;
 		color: white;
 	}
-
+  #bg{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
+        background-image: url("Imagenes/fondo.jpg"); 
+        background-size:100% 100%;
+        background-attachment: fixed;
+    }
   section .imagenes-menu img{
     width: 100%;
     margin: 10px;
