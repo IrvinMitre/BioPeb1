@@ -16,8 +16,6 @@ class MyMiddleware
     public function handle($request, Closure $next)
     {
 
-      if ($request->input('admin') == 0) {
-       return redirect('home');
+     return $next($request);
    }
-       return $next($request);
-    }
+ }
