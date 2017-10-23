@@ -33,10 +33,10 @@
     width: 100%;
       margin: 0 auto; /* Align slide image horizontally center */
   }
- 
+
 	footer {
 		background-color: #424242;
-		position: absolute;
+		position: fixed;
 		bottom: 0;
 		width: 100%;
 		height: 180px;
@@ -52,7 +52,7 @@
 		width: 100%;
 		height: 100%;
 		background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-		background-image: url("Imagenes/fondo.jpg"); 
+		background-image: url("Imagenes/fondo.jpg");
 		background-size:100% 100%;
 		background-attachment: fixed;
 	}
