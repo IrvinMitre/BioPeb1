@@ -77,12 +77,12 @@
 						<img src="{{ asset('Imagenes/antisepsia.jpg') }}" alt="lectura antisepsia " class="img-rounded">
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-						<a href="{{ asset('Docs/Desinfección.pdf') }}">
-						<img src="{{ asset('Imagenes/desinfeccion.jpg') }}" alt="actividades" class="img-rounded">
-					</div>
-					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 						<a href="{{ asset('Docs/Esterilizacion.pdf') }}">
 						<img src="{{ asset('Imagenes/esterilizacion.jpg') }}" alt="actividades" class="img-rounded">
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+						<a href="{{ asset('Docs/Microorganismos.pdf') }}">
+						<img src="{{ asset('Imagenes/microorganismos.jpg') }}" alt="actividades" class="img-rounded">
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 						<a href="{{ asset('Docs/Vacunas.pdf') }}">
