@@ -20,7 +20,7 @@
 		position: absolute;
 		bottom: 0;
 		width: 100%;
-		height: 180px;
+		height: 166px;
 		color: white;
 	}
   footer .imagen-footer img{
@@ -40,7 +40,7 @@
         background-attachment: fixed;
     }
   section .imagenes-menu img{
-    width: 100%;
+    width: 50%;
     margin: 10px;
   }
 
@@ -55,7 +55,7 @@
       min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
   }
   section .carousel .item img{
-    width: 100%;
+    width: 50%;
       margin: 0 auto; /* Align slide image horizontally center */
   }
 --></style>
@@ -66,8 +66,7 @@
 <body>
 <!--Seccion de temas-->
   <section class="main">
-    <div class="container">
-
+  
       <!--Seccion del carrucel-->
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <!-- Carousel indicators -->
@@ -80,17 +79,25 @@
           <!-- Wrapper for carousel items -->
           <div class="carousel-inner">
               <div class="item active">
-                  <img src="{{ asset('Imagenes/s1.jpg') }}" alt="First Slide" class="img-rounded">
-              </div>
+              <a href="/home">
+			      <img src="{{ asset('Imagenes/s1.jpg') }}" alt="First Slide" class="img-rounded">
+              </a>
+			  </div>
+			  <div class="item">
+              <a href="/home">
+			      <img src="{{ asset('Imagenes/s2.jpg') }}" alt="Second Slide" class="img-rounded">
+              </a>
+			  </div>
               <div class="item">
-                  <img src="{{ asset('Imagenes/s2.jpg') }}" alt="Second Slide" class="img-rounded">
-              </div>
+              <a href="/home">
+			      <img src="{{ asset('Imagenes/s3.jpg') }}" alt="Third Slide" class="img-rounded">
+              </a>
+			  </div>
               <div class="item">
-                  <img src="{{ asset('Imagenes/s3.jpg') }}" alt="Third Slide" class="img-rounded">
-              </div>
-              <div class="item">
-                  <img src="{{ asset('Imagenes/s4.jpg') }}" alt="Forth Slide" class="img-rounded">
-              </div>
+              <a href="/home">
+			      <img src="{{ asset('Imagenes/s4.jpg') }}" alt="Forth Slide" class="img-rounded">
+              </a>
+			  </div>
           </div>
           <!-- Carousel controls -->
           <a class="carousel-control left" href="#myCarousel" data-slide="prev">
@@ -99,35 +106,51 @@
           <a class="carousel-control right" href="#myCarousel" data-slide="next">
               <span class="glyphicon glyphicon-chevron-right"></span>
           </a>
-      </div>
       <!--Seccion del carrucel-->
 
   </section>
+  
   <footer>
     <div class="container">
       <div class="row">
         <div class="imagen-footer col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2">
           <img src="{{ asset('Imagenes/logoBuap.png') }}" alt="Escudo-BUAP">
         </div>
-   <div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-          <p><br><br></p>
-       </div>
-       <div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-          <p><span class="glyphicon glyphicon-envelope"></span> Contáctanos</p>
-       </div>
-   <div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-          <p><span class="glyphicon glyphicon-leaf"></span> Acerca de</p>
-       </div>
-   <div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-          <p><span class="glyphicon glyphicon-question-sign"></span> FAQ's</p>
-       </div>
-       <div align="right" class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-          <p>Powered by BioPEB &copy 2017</p>
-       </div>
+		<div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+			<p><br><br></p>
+		</div>
 
-      </div>
+			<a href="/contacto">
+			<font color="white">
+				<div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+					<p><span class="glyphicon glyphicon-envelope"></span> Contáctanos</p>
+				</div>
+			</font>
+			</a>
+		
+			<a href="/acerca-de">
+			<font color="white">
+				<div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+					<p><span class="glyphicon glyphicon-leaf"></span> Acerca de</p>
+				</div>
+			</font>
+			</a>
+			
+			<a href="/faqs">
+			<font color="white">
+				<div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+					<p><span class="glyphicon glyphicon-question-sign"></span> FAQ's</p>
+				</div>
+			</font>
+			</a>
+			
+			<div align="right" class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+				<p>Powered by BioPEB &copy 2017</p>
+			</div>
+		</font>
     </div>
   </footer>
+  
   <script src="js/jquery-3.2.1.min.js" charset="utf-8"></script>
   <script src="bootstrap.min.js" charset="utf-8"></script>
   </body>
