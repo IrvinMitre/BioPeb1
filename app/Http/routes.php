@@ -73,5 +73,19 @@ return view('Preguntas/preguntas');
 Route::get('/crucigrama', function(){
 return view('Actividades/Crusigrama/crusigrama');
 })->middleware('auth');
-
+//--------------------------------------------------
+//Ruta para el crucigrama
+Route::get('/acerca-de', function(){
+return view('Acerca/acerca');
+})->middleware('auth');
+//--------------------------------------------------
+//Ruta para acerca de nosotros
+Route::get('/acerca-de', function(){
+return view('Acerca/acerca');
+})->middleware('auth');
+//--------------------------------------------------
+//Ruta para avisos
+Route::get('/avisos', function(){
+return view('Avisos/avisos');
+})->middleware('auth');
 //Route::get
