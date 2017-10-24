@@ -70,8 +70,9 @@
 				<article class="row">
 					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 						<a href="/crucigrama">
-						<img src="{{ asset('Imagenes/cruz.jpg') }}" alt="actividades" class="img-rounded">
-            <img src="{{ asset('Imagenes/test.jpg') }}" alt="actividades" class="img-rounded">
+						<img src="{{ asset('Imagenes/cruz.jpg') }}" alt="actividades" class="img-rounded"></a>
+						<a href="/cuestionario">
+            <img src="{{ asset('Imagenes/test.jpg') }}" alt="actividades" class="img-rounded"></a>
 					</div>
 				</article>
 			</div>
