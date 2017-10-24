@@ -136,7 +136,7 @@
 			</font>
 			</a>
 			
-			<a href="/faqs">
+			<a href="/preguntas">
 			<font color="white">
 				<div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
 					<p><span class="glyphicon glyphicon-question-sign"></span> FAQ's</p>

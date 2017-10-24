@@ -39,7 +39,7 @@
 		position: fixed;
 		bottom: 0;
 		width: 100%;
-		height: 180px;
+		height: 166px;
 		color: white;
 	}
 
@@ -84,52 +84,81 @@
 			</a>
 		  </div>
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <img src="{{ asset('Imagenes/multimedia.jpg') }}" alt="multimedia" class="img-rounded">
-          </div>
+            <a href="/multimedia">
+			<img src="{{ asset('Imagenes/multimedia.jpg') }}" alt="multimedia" class="img-rounded">
+			</a>
+		  </div>
 		  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+			<a href="/avisos">
 			<img src="{{ asset('Imagenes/avisos.jpg') }}" alt="avisos" class="img-rounded">
+			</a>
 		  </div>
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <img src="{{ asset('Imagenes/forin.jpg') }}" alt="foro" class="img-rounded">
-          </div>
+			<a href="/foro">
+			<img src="{{ asset('Imagenes/forin.jpg') }}" alt="foro" class="img-rounded">
+			</a>
+		  </div>
 		  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <img src="{{ asset('Imagenes/faqs.jpg') }}" alt="preguntas" class="img-rounded">
+            <a href="/preguntas">
+			<img src="{{ asset('Imagenes/faqs.jpg') }}" alt="preguntas" class="img-rounded">
+			</a>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <img src="{{ asset('Imagenes/contacto.jpg') }}" alt="contacto" class="img-rounded">
-          </div>
+            <a href="/contacto">	
+			<img src="{{ asset('Imagenes/contacto.jpg') }}" alt="contacto" class="img-rounded">
+			</a>
+		  </div>
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+			<a href="/acerca-de">
 			<img src="{{ asset('Imagenes/bio.jpg') }}" alt="acerca de" class="img-rounded">
+			</a>
 		  </div>
         </article>
       </div>
     </div>
   </section>
-  <footer>
+
+    <footer>
     <div class="container">
       <div class="row">
         <div class="imagen-footer col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2">
           <img src="{{ asset('Imagenes/logoBuap.png') }}" alt="Escudo-BUAP">
         </div>
-   <div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-          <p><br><br></p>
-       </div>
-       <div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-          <p><span class="glyphicon glyphicon-envelope"></span> Contáctanos</p>
-       </div>
-   <div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-          <p><span class="glyphicon glyphicon-leaf"></span> Acerca de</p>
-       </div>
-   <div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-          <p><span class="glyphicon glyphicon-question-sign"></span> FAQ's</p>
-       </div>
-       <div align="right" class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-          <p>Powered by BioPEB &copy 2017</p>
-       </div>
+		<div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+			<p><br><br></p>
+		</div>
 
-      </div>
+			<a href="/contacto">
+			<font color="white">
+				<div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+					<p><span class="glyphicon glyphicon-envelope"></span> Contáctanos</p>
+				</div>
+			</font>
+			</a>
+		
+			<a href="/acerca-de">
+			<font color="white">
+				<div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+					<p><span class="glyphicon glyphicon-leaf"></span> Acerca de</p>
+				</div>
+			</font>
+			</a>
+			
+			<a href="/preguntas">
+			<font color="white">
+				<div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+					<p><span class="glyphicon glyphicon-question-sign"></span> FAQ's</p>
+				</div>
+			</font>
+			</a>
+			
+			<div align="right" class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+				<p>Powered by BioPEB &copy 2017</p>
+			</div>
+		</font>
     </div>
   </footer>
+  
   <script src="js/jquery-3.2.1.min.js" charset="utf-8"></script>
   <script src="bootstrap.min.js" charset="utf-8"></script>
 </body>
