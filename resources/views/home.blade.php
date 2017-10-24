@@ -93,11 +93,7 @@
 			<img src="{{ asset('Imagenes/avisos.jpg') }}" alt="avisos" class="img-rounded">
 			</a>
 		  </div>
-          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-			<a href="/foro">
-			<img src="{{ asset('Imagenes/forin.jpg') }}" alt="foro" class="img-rounded">
-			</a>
-		  </div>
+        
 		  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
             <a href="/preguntas">
 			<img src="{{ asset('Imagenes/faqs.jpg') }}" alt="preguntas" class="img-rounded">

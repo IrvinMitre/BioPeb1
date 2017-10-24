@@ -78,8 +78,7 @@
 							</a>
 							<ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/actividades') }}"></i>Actividades</a></li>
-                                <li><a href="{{ url('/lecturas') }}">Lecturas</a></li>
-                                <li><a href="{{ url('/foro') }}">Foro</a></li>
+                                <li><a href="{{ url('/lecturas') }}">Lecturas</a>
                                 <li><a href="{{ url('/multimedia') }}">Multimedia</a></li>
                                 <li><a href="{{ url('/contacto') }}">Contacto</a></li>
 								<li><a href="{{ url('/avisos') }}">Avisos</a></li>

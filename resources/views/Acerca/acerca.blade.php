@@ -57,13 +57,62 @@
 		background-attachment: fixed;
 	}
 	  footer .imagen-footer img{
-      width: 100%;
+      width: 100%;}
+        img {
+    width: 100%;
   }
 
 	--></style>
 
 <!--Cuerpo de la pagina-->
-	
+
+
+</style>
+<div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+          <div class="panel panel-default">
+              <div class="panel-heading">
+               <img src="{{ asset('Imagenes/usuario.png') }}" alt="1">
+              </div>
+              <div class="panel-body ">
+                 Erick Paul Garcia Ramirez
+                 <br><a href="https://twitter.com/EPaulGR">Twitter</a>
+                 <br><a href="https://www.facebook.com/profile.php?id=100001125921635">Facebook</a>
+                 <br><a href="https://www.instagram.com/epaulgr/">Instagram</a>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                <img src="{{ asset('Imagenes/usuario.png') }}" alt="2">
+              </div>
+              <div class="panel-body ">
+                 Luis Adelfo Lobato Cázares
+                 <br><a href="https://www.instagram.com/luis_lobatoczs/">Instagram</a>
+                 <br><a href="https://www.facebook.com/luisadelfo.lobatocazares">Facebook</a>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                <img src="{{ asset('Imagenes/usuario.png') }}" alt="3">
+              </div>
+              <div class="panel-body ">
+                 Irvin Santiago Mitre Martinez
+                 <br><a href="https://www.facebook.com/meison.dark">Facebook</a>
+              </div>
+          </div>
+      </div>
+
+    </div>
+
+</div>
+
 <body background-image: src="{{ asset('Imagenes/fondo.jpg') }}">
 	<!--Seccion de actividades-->
 	
@@ -91,34 +140,7 @@
 	
 	<script src="js/jquery-3.2.1.min.js" charset="utf-8"></script>
 	<script src="bootstrap.min.js" charset="utf-8"></script>
-
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="imagen-footer col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2">
-					<img src="{{ asset('Imagenes/logoBuap.png') }}" alt="Escudo-BUAP">
-				</div>
-			<div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-			<p><br><br></p>
-			</div>
-			<div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-				<p><span class="glyphicon glyphicon-envelope"></span> Contáctanos</p>
-			</div>
-			<div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-				<p><span class="glyphicon glyphicon-leaf"></span> Acerca de</p>
-			</div>
-			<div class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-				<p><span class="glyphicon glyphicon-question-sign"></span> FAQ's</p>
-			</div>
-			<div align="right" class="links de contacto col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-				<p>Powered by BioPEB &copy 2017</p>
-			</div>
-
-      </div>
-    </div>
-  </footer>
-	
-	
+		
 </body>
 
 </html>
