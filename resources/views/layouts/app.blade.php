@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>BioPeb</title>
+    <title>BioPEB</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
@@ -42,7 +42,9 @@
                 </button>
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    BioPeb
+                    <font color="white">
+						BioPEB
+					</font>
                 </a>
             </div>
 
@@ -54,34 +56,44 @@
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
+						<font color="white">
                         <li><a href="{{ url('/login') }}">Ingresar</a></li>
                         <li><a href="{{ url('/register') }}">Registrar</a></li>
+						</font>
                     @else
                             <ul class="nav navbar-nav">
                               <li>
 								<a href="{{ url('/home') }}">
+								<font color="white">
 								<span class="glyphicon glyphicon-home"></span>
 								Inicio</a></li>
+								</font>
                             </ul>
                             <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            <span class="glyphicon glyphicon-th-list">
+                            <font color="white">
+							<span class="glyphicon glyphicon-th-list">
 							Menu<span class="caret"></span>
-                            </a>
+                            </font>
+							</a>
 							<ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/actividades') }}"></i>Actividades</a></li>
                                 <li><a href="{{ url('/lecturas') }}">Lecturas</a></li>
                                 <li><a href="{{ url('/foro') }}">Foro</a></li>
-                                <li><a href="{{ url('/multimedia') }}">multimedia</a></li>
+                                <li><a href="{{ url('/multimedia') }}">Multimedia</a></li>
                                 <li><a href="{{ url('/contacto') }}">Contacto</a></li>
+								<li><a href="{{ url('/avisos') }}">Avisos</a></li>
                                 <li><a href="{{ url('/preguntas') }}">Preguntas</a></li>
+                                <li><a href="{{ url('/acerca-de') }}">Acerca de</a></li>
 
                             </ul>
                             </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+								<font color="white">
 								<span class="glyphicon glyphicon-user">
                                 {{ Auth::user()->name }} <span class="caret"></span>
+								</font>
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
